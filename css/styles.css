@@ -1,0 +1,166 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display: none;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+/* css defaults */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* css-variables */
+:root {
+   --clr-neutral-100: hsl(0, 0%, 100%);
+
+   --clr-neutral-400: hsl(215, 51%, 70%);
+   --clr-primary-400: hsl(178, 100%, 50%);
+
+   --clr-secondary-300: hsl(215, 32%, 27%);
+   --clr-secondary-400: hsl(215, 49%, 15%);
+   --clr-secondary-500: hsl(216, 56%, 12%);
+   --clr-secondary-600: hsl(217, 54%, 11%);
+   --clr-secondary-700: hsl(217, 57%, 7%);
+
+   --fw-light: 300;
+   --fw-regular: 400;
+   --fw-bold: 600;
+
+   --ff-base: "Outfit", sans-serif;
+
+   --fs-base: 1.125rem;
+}
+
+/* general-styles */
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-light);
+  background-color: var(--clr-secondary-600);
+  color: var(--clr-neutral-100);
+  margin-inline: 1rem;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.main_content {
+   background: var(--clr-secondary-400);
+   padding: 1.5rem;
+   border-radius: 0.8rem;
+   box-shadow: 0.15rem 1.5rem 1rem 1rem var(--clr-secondary-700);
+}
+
+@media(min-width:600px) {
+    .main_content {
+       width: 22rem;
+       box-shadow: 0.15rem 1.5rem 0.7rem 1rem var(--clr-secondary-600), 0 0 1rem 2.5rem var(--clr-secondary-500);
+    }
+}
+
+.main_content > img {
+    border-radius: 0.6rem;
+}
+
+.main_content > h1 {
+    font-size: 1.5rem;
+}
+
+.main_content > p {
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-light);
+}
+
+.equilibrium {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.flex-container {
+    display: flex;
+    gap: 6rem;
+}
+
+.flex-group {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-group > h2 {
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+}
+
+.ethereum {
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-bold);
+}
+
+.timer {
+    color: var(--clr-neutral-400);
+}
+
+hr {
+    border: solid var(--clr-secondary-300) thin;
+}
+
+.jules {
+    justify-content: flex-start;
+    font-weight: var(--fw-light);
+    font-size: 0.8rem;
+}
+
+.jules > img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: solid 1px;
+}
